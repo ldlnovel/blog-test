@@ -7,7 +7,7 @@ var pool = mysql.createPool({
     database: 'test'
 });
 
-function query(sql, callback) {
+function Sql(sql, callback) {
     pool.getConnection(function (err, connection) {
 				// Use the connection
 				if(err) {
@@ -21,4 +21,4 @@ function query(sql, callback) {
         });
     });
 }
-exports.query = query;
+exports.Sql = Sql;
